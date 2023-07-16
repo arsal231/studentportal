@@ -1,13 +1,13 @@
 import {useNavigate  } from 'react-router-dom';
 import {Container,Button} from 'react-bootstrap';
 import { useState } from 'react';
-let currentInterval = 0;
+let currentInterval = undefined;
 const Counterpage = (props)=>{
     
     
     const [counter,setCounter] = useState(0);
     const [startnow,setStartnow] = useState(false)
-    
+
     function startCounter()
     {
       currentInterval =   setInterval(()=>
