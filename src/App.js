@@ -10,6 +10,8 @@ import Addstudent from './components/addstudent'
 import Liststudent from './components/liststudent'
 import Middlewhere  from './components/middlewhere'
 import Editstudent from './components/editstudent'
+import Counterpage from './components/counterpage'
+
 
 import { BrowserRouter,Routes,Link,Route } from 'react-router-dom';
 import  {Container,Row} from 'react-bootstrap';
@@ -71,6 +73,8 @@ const App=()=>{
               <Route path='/register' element={<Middlewhere cmp={<Register/>} />}></Route>
               <Route path='/addstudent' element={<Addstudent />}></Route>
               <Route path='/liststudent' element={<Liststudent />}></Route>
+              <Route path='/counterpage' element={<Counterpage />}></Route>
+              
               <Route path='/editstudent/:id' element={<Editstudent />}></Route>
               <Route path='/*' element={<Liststudent />}></Route>
               {/* <Route path='/register' element={<Register />}></Route> */}
