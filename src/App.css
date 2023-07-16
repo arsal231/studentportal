@@ -23,6 +23,24 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.registerblock
+{
+border:1px solid #ccc;
+margin:40px;
+padding: 40px;
+
+}
+.mr20{
+  margin-top: 30px !important;
+  margin-bottom:30px;
+}
+.loginblock,.registerblock
+{
+border:1px solid #ccc;
+margin:40px;
+padding: 40px;
+
+}
 
 .App-link {
   color: #61dafb;
