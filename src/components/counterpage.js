@@ -4,39 +4,32 @@ import { useState } from 'react';
 let currentInterval = 0;
 const Counterpage = (props)=>{
     
-    // var userId ='';
-    // if(localStorage.getItem('user-info'))
-    // {
-    //   let LoggedInUser = JSON.parse(localStorage.getItem('user-info'));
-    //    userId = LoggedInUser.id;
-    // }
+    
     const [counter,setCounter] = useState(0);
     const [startnow,setStartnow] = useState(false)
-   function startCounter()
-   {
-    currentInterval =   setInterval(()=>{
-
-        setCounter((x)=>x+1);
-
-    },1000)
-    setStartnow(true);
     
-   }
-   function stopCounter()
-   {
-    clearInterval(currentInterval);  
-    
-    setStartnow(false);
-   }
-   function ResetCounter()
-   {
-    setStartnow(false);
-    clearInterval(currentInterval); 
-    setCounter(0); 
+    function startCounter()
+    {
+      currentInterval =   setInterval(()=>
+      {
+        setCounter((index)=>index+1);
 
-   // alert(' i am start reset counter')
-   }
-    
+      },1000)
+      setStartnow(true);
+    }
+
+    function stopCounter()
+    {
+      clearInterval(currentInterval);  
+      setStartnow(false);
+    }
+    function ResetCounter()
+    {
+      setStartnow(false);
+      clearInterval(currentInterval); 
+      setCounter(0); 
+    }
+      
   // console.log(props);
     return (
      <>
