@@ -52,6 +52,7 @@ const Header = (props)=>
                 <>
                 <Link to="/addstudent" className="nav-link">Add Student</Link>
                 <Link to="/liststudent" className="nav-link">Student Listing</Link>
+                <Link to="/counterpage" className="nav-link">My counter</Link>
                 </>
                 :
                 <>
@@ -111,7 +112,7 @@ const Header = (props)=>
       
     </Carousel>
 
-         
+      {!(routeObject.pathname=='/counterpage') ?    
     <Container >
       
       <Row className="mr20">
@@ -156,7 +157,9 @@ const Header = (props)=>
         </Col>
       </Row>
     </Container>
-
+      : 
+      ''
+     }
 
 
 
